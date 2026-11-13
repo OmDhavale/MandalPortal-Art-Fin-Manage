@@ -1,0 +1,20 @@
+{
+  "name": "mandal-portal-art-fin-manage",
+  "version": "1.0.0",
+  "description": "Mandal Portal for Art-Finance-Management - Murtikar Discovery & Directory",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix my-vite-app run dev",
+    "build": "npm --prefix my-vite-app run build",
+    "preview": "npm --prefix my-vite-app run preview"
+  },
+  "keywords": [
+    "murtikar",
+    "mandal",
+    "ganesh-festival",
+    "art-finance-management"
+  ],
+  "author": "",
+  "license": "ISC"
+}
+
