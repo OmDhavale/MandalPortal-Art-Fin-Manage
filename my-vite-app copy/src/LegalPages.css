@@ -1,0 +1,23 @@
+.legal-site { min-height:100vh;background:#faf8f4;color:#242720;font-family:'DM Sans',Arial,sans-serif; }
+.legal-main { width:min(900px,calc(100% - 38px));margin:0 auto;padding:58px 0 72px; }
+.legal-hero { padding:30px 0 35px;border-bottom:1px solid #eae3d9; }
+.legal-kicker { color:#d87531;font-size:10px;font-weight:900;letter-spacing:1.6px; }
+.legal-hero h1 { margin:13px 0 9px;font-family:'Manrope',Arial,sans-serif;font-size:clamp(34px,5vw,48px);letter-spacing:-1.7px; }
+.legal-hero p { color:#777970;font-size:14px;line-height:1.7; }
+.legal-document { margin-top:28px;padding:34px 40px;background:white;border:1px solid #eee8df;border-radius:14px;box-shadow:0 8px 28px #3a2c1908; }
+.legal-meta { display:flex;flex-wrap:wrap;gap:10px 24px;padding-bottom:20px;margin-bottom:23px;border-bottom:1px solid #f0ece6;color:#89877f;font-size:11px;font-weight:600; }
+.legal-notice { padding:14px 16px;margin:0 0 24px;border:1px solid #f0d6b8;border-radius:9px;background:#fff8ef;color:#725438;font-size:12px;line-height:1.7; }
+.legal-document p,.legal-document li { color:#64675f;font-size:13px;line-height:1.85; }
+.legal-document p { margin:0 0 16px; }
+.legal-document h2 { margin:27px 0 9px;font-family:'Manrope',Arial,sans-serif;font-size:17px;letter-spacing:-.3px; }
+.legal-document ul,.legal-document ol { padding-left:21px;margin:8px 0 17px; }
+.legal-document li { padding:3px 0 3px 3px; }
+.legal-document a { color:#c96525;text-decoration:underline;text-underline-offset:3px; }
+.legal-back { display:inline-flex;margin-top:22px;border:0;background:none;color:#c96525;font-size:13px;font-weight:800;cursor:pointer; }
+.deletion-document { padding:38px 42px; }
+.deletion-email-button { display:inline-flex;align-items:center;gap:18px;margin:5px 0 12px;padding:13px 18px;border-radius:9px;background:#e87527;color:white!important;text-decoration:none!important;font-size:12px;font-weight:800; }
+.legal-footer { display:flex;justify-content:space-between;align-items:center;gap:18px;padding:22px max(22px,calc((100% - 900px)/2));border-top:1px solid #eae3d9;color:#89877f;font-size:11px; }
+.legal-footer div { display:flex;gap:18px; }
+.legal-footer button,.legal-footer a { padding:0;border:0;background:none;color:#696b62;text-decoration:none;font:inherit;cursor:pointer; }
+.legal-footer button:hover,.legal-footer a:hover {color:#c96525}
+@media(max-width:650px) { .legal-main {padding:35px 0 48px}.legal-document,.deletion-document {padding:24px 20px}.legal-footer {align-items:flex-start;flex-direction:column}.legal-footer div {flex-wrap:wrap} }

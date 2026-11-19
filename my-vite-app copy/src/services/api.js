@@ -1,6 +1,6 @@
 // API Service for Mandal Portal
 // Connects in real-time to Art-Finance-Management API
-import { MURTIKARS_DATA } from '../data/murtikarsData';
+
 
 const DEFAULT_ENDPOINTS = [
   import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
@@ -70,9 +70,9 @@ export const apiService = {
       }
     }
 
-    // Fallback to rich pre-populated dataset if server isn't running yet
+    // No fallback data; return empty array when no API response
     return {
-      data: MURTIKARS_DATA,
+      data: [],
       isRealTime: false,
       sourceUrl: null,
       timestamp: new Date().toLocaleTimeString()
@@ -130,7 +130,8 @@ export const apiService = {
 
   // Aggregate year-wise analytics across murtikars
   getAggregatedYearlyStats(murtikarsList = []) {
-    const list = murtikarsList.length > 0 ? murtikarsList : MURTIKARS_DATA;
+    const list = murtikarsList.length > 0 ? murtikarsList : [];
+    // If no list provided, callers should pass data from getMurtikars()
     const yearMap = {};
 
     list.forEach(murtikar => {

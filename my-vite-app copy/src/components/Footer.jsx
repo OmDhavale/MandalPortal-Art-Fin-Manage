@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconSparkles, IconShieldCheck, IconPhone, IconAward } from './Icons';
 
-export default function Footer({ t, lang }) {
+export default function Footer({ t, lang, navigate }) {
   return (
     <footer className="site-footer">
       <div className="container footer-inner">
@@ -54,7 +54,12 @@ export default function Footer({ t, lang }) {
           <p className="copyright-text">
             © {new Date().getFullYear()} Art Finance Management. {t.allRightsReserved}
           </p>
-          <div className="bottom-badges">
+          <div className="portal-footer-links">
+            {navigate && <>
+              <button type="button" onClick={() => navigate('/')}>Home</button>
+              <button type="button" onClick={() => navigate('/privacy-policy')}>Privacy Policy</button>
+              <button type="button" onClick={() => navigate('/delete-account')}>Delete Account</button>
+            </>}
             <span className="made-in-india-badge">🇮🇳 Proudly Made in India</span>
           </div>
         </div>

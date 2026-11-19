@@ -14,7 +14,7 @@ import { translations } from './translations';
 import { apiService } from './services/api';
 import './App.css';
 
-export default function App() {
+export default function App({ navigate }) {
   const [lang, setLang] = useState('en');
   const [murtikars, setMurtikars] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -199,6 +199,7 @@ export default function App() {
 
       {/* Main Navbar */}
       <Navbar
+        navigate={navigate}
         lang={lang}
         setLang={setLang}
         t={t}
@@ -383,7 +384,7 @@ export default function App() {
       )}
 
       {/* Footer */}
-      <Footer t={t} lang={lang} />
+      <Footer t={t} lang={lang} navigate={navigate} />
     </div>
   );
 }

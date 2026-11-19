@@ -2829,3 +2829,261 @@
   overflow-y: auto;
   padding-right: 4px; /* space for scrollbar */
 }
+
+/* The Mandal Portal now has one unified sticky navbar. Keep it flush with the top. */
+.app-layout > .afm-single-header { top: 0; }
+
+.portal-footer-links { display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:16px; }
+.portal-footer-links button { border:0; padding:0; background:none; color:var(--text-secondary); font:inherit; font-size:.78rem; cursor:pointer; }
+.portal-footer-links button:hover { color:var(--primary); }
+@media (max-width: 700px) {
+  .portal-footer-links { justify-content:flex-start; }
+}
+
+
+/* =========================================================
+   AFM UNIFIED PORTAL HEADER + SHARED MARKETING VISUAL SYSTEM
+   ========================================================= */
+.app-layout {
+  --portal-ink: #20231f;
+  --portal-muted: #77776f;
+  --portal-orange: #e87527;
+  --portal-line: #ece6dd;
+  min-height: 100vh;
+  background: #fbf8f3;
+  color: var(--portal-ink);
+  font-family: 'DM Sans', var(--font-sans);
+}
+
+.afm-single-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: rgba(255, 255, 255, .97);
+  border-bottom: 1px solid #ece6dd;
+  box-shadow: 0 3px 16px rgba(38, 31, 23, .045);
+  backdrop-filter: blur(16px);
+}
+
+.afm-single-nav {
+  width: min(1480px, calc(100% - 48px));
+  min-height: 78px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.afm-brand {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #20231f;
+  text-align: left;
+  cursor: pointer;
+}
+
+.afm-brand-mark {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #f1dfcc;
+  border-radius: 14px;
+  background: #fff5eb;
+}
+.afm-brand-mark img { width: 34px; height: 36px; object-fit: contain; }
+.afm-brand-copy { display: flex; flex-direction: column; gap: 2px; white-space: nowrap; }
+.afm-brand-copy strong { color: #252720; font-size: 14px; font-weight: 800; letter-spacing: -.35px; }
+.afm-brand-copy small { color: #817c73; font-size: 10px; font-weight: 600; }
+
+.afm-nav-content {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(14px, 1.7vw, 27px);
+}
+
+.afm-site-links,
+.afm-portal-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  min-width: 0;
+}
+
+.afm-site-links button,
+.afm-site-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #625e57;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background .18s ease, color .18s ease;
+}
+.afm-site-links button:hover,
+.afm-site-links button.active { background: #fff2e6; color: #c65b16; }
+.afm-site-links a {
+  margin-left: 3px;
+  padding: 0 13px;
+  background: #e87527;
+  color: #fff;
+  box-shadow: 0 5px 13px #e8752728;
+}
+.afm-site-links a:hover { background: #cf601a; }
+
+.afm-portal-tools {
+  gap: 3px;
+  padding-left: clamp(9px, 1.2vw, 18px);
+  border-left: 1px solid #eee8e0;
+}
+.afm-tool-button,
+.afm-compare-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 37px;
+  padding: 0 9px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #575b55;
+  font: inherit;
+  font-size: 10.5px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: .18s ease;
+}
+.afm-tool-button:hover,
+.afm-tool-button.active { background: #fff0e5; color: #d76520; }
+.afm-compare-button {
+  margin: 0 3px;
+  padding: 0 10px;
+  border: 1px solid #e8e2d9;
+  border-radius: 999px;
+  color: #33372f;
+  background: white;
+}
+.afm-compare-button:hover { border-color: #e87527; color: #cf601a; background: #fffaf5; }
+.afm-compare-button b,
+.afm-count {
+  display: inline-grid;
+  place-items: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 99px;
+  background: #e87527;
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+}
+.afm-count { min-width: 16px; height: 16px; }
+.afm-portal-tools .lang-switcher { flex: 0 0 auto; margin-left: 3px; }
+.afm-portal-tools .lang-btn { padding: 5px 8px; font-size: 10px; }
+
+.afm-mobile-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  padding: 9px;
+  border: 1px solid #e9e1d8;
+  border-radius: 10px;
+  background: white;
+}
+.afm-mobile-toggle span { display: block; height: 2px; margin: 4px 0; border-radius: 2px; background: #34372f; }
+
+/* Bring the portal's visual language closer to the warm AFM landing page. */
+.app-layout .hero-banner {
+  background: radial-gradient(circle at 88% 30%, rgba(194, 94, 39, .22), transparent 28%), linear-gradient(135deg, #171b19 0%, #252b26 100%);
+}
+.app-layout .hero-heading { letter-spacing: -.035em; }
+.app-layout .hero-subtext { color: #c2c3bd; }
+.app-layout .main-content { background: #fbf8f3; }
+.app-layout .search-filter-section { scroll-margin-top: 100px; }
+.app-layout .search-bar-wrap { border-color: #eee6dc; border-radius: 15px; }
+.app-layout .city-chip,
+.app-layout .custom-select,
+.app-layout .reset-filters-btn { border-color: #e9e1d7; }
+.app-layout .city-chip.active { background: #e87527; border-color: #e87527; }
+.app-layout .murtikar-card,
+.app-layout .murtikar-card-container {
+  border-color: #ece5dc;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(45, 35, 23, .035);
+}
+.app-layout .murtikar-card:hover,
+.app-layout .murtikar-card-container:hover {
+  box-shadow: 0 12px 30px rgba(45, 35, 23, .075);
+}
+.app-layout .section-title,
+.app-layout .results-summary-row { color: #292d27; }
+
+/* Desktop widths: keep one compact row without horizontal page overflow. */
+@media (max-width: 1450px) {
+  .afm-single-nav { width: calc(100% - 32px); gap: 14px; }
+  .afm-nav-content { gap: 10px; }
+  .afm-site-links button, .afm-site-links a { padding-left: 8px; padding-right: 8px; font-size: 10.5px; }
+  .afm-tool-button, .afm-compare-button { padding-left: 7px; padding-right: 7px; font-size: 10px; }
+  .afm-brand-copy strong { font-size: 13px; }
+}
+@media (max-width: 1120px) {
+  .afm-single-nav { min-height: 72px; }
+  .afm-mobile-toggle { display: block; flex: 0 0 auto; }
+  .afm-nav-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 14px 20px 18px;
+    background: #fff;
+    border-bottom: 1px solid #ece6dd;
+    box-shadow: 0 12px 20px rgba(30, 25, 18, .08);
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .afm-nav-content.is-open { display: flex; }
+  .afm-site-links, .afm-portal-tools { flex-wrap: wrap; justify-content: flex-start; }
+  .afm-site-links { padding-bottom: 10px; border-bottom: 1px solid #f0ebe5; }
+  .afm-portal-tools { padding: 0; border: 0; }
+  .afm-site-links button, .afm-site-links a,
+  .afm-tool-button, .afm-compare-button { min-height: 40px; font-size: 12px; }
+}
+@media (max-width: 600px) {
+  .afm-single-nav { width: calc(100% - 28px); min-height: 66px; }
+  .afm-brand-mark { width: 39px; height: 39px; }
+  .afm-brand-copy strong { font-size: 12px; }
+  .afm-brand-copy small { font-size: 9px; }
+  .afm-nav-content { padding: 12px 14px 16px; }
+  .afm-site-links, .afm-portal-tools { gap: 5px; }
+  .afm-site-links button, .afm-site-links a { flex: 1 1 calc(50% - 5px); }
+  .afm-site-links a { margin: 0; }
+  .afm-tool-button, .afm-compare-button { flex: 1 1 auto; }
+  .app-layout .hero-banner { padding-top: 36px; padding-bottom: 42px; }
+  .app-layout .hero-heading { font-size: clamp(1.7rem, 7vw, 2.2rem); }
+}
