@@ -21,3 +21,54 @@
 .legal-footer button,.legal-footer a { padding:0;border:0;background:none;color:#696b62;text-decoration:none;font:inherit;cursor:pointer; }
 .legal-footer button:hover,.legal-footer a:hover {color:#c96525}
 @media(max-width:650px) { .legal-main {padding:35px 0 48px}.legal-document,.deletion-document {padding:24px 20px}.legal-footer {align-items:flex-start;flex-direction:column}.legal-footer div {flex-wrap:wrap} }
+
+/* Privacy Policy enhancements */
+
+.policy-section {
+  scroll-margin-top: 90px;
+  padding-top: 4px;
+}
+
+.legal-document .policy-section h2 {
+  margin-top: 34px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #f0ece6;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #242720;
+}
+
+.legal-document .policy-section h3 {
+  margin: 19px 0 8px;
+  color: #41443d;
+  font-family: 'Manrope', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.legal-document .policy-section p {
+  margin-bottom: 13px;
+}
+
+.legal-document .policy-section ul {
+  margin: 10px 0 18px;
+}
+
+.legal-document .policy-section li {
+  padding: 4px 0;
+}
+
+.legal-document .policy-section a {
+  font-weight: 700;
+}
+
+@media (max-width: 650px) {
+  .legal-document .policy-section h2 {
+    font-size: 16px;
+    margin-top: 27px;
+  }
+
+  .legal-document .policy-section h3 {
+    font-size: 13px;
+  }
+}

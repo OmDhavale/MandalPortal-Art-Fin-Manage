@@ -11,7 +11,7 @@ const routes = [
   { path: '/', element: Home },
   { path: '/mandal-portal', element: App },
   { path: '/privacy-policy', element: PrivacyPolicy },
-  // { path: '/delete-account', element: DeleteAccount },
+  { path: '/delete-account', element: DeleteAccount },
   { path: '*', element: Home },
 ];
 
