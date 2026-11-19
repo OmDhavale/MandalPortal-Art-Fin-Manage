@@ -34,7 +34,7 @@ export default function GlobalNavbar({ navigate, active = '' }) {
           <button className={active === 'home' ? 'active' : ''} onClick={() => go('/')}>Home</button>
           <button className={active === 'portal' ? 'active' : ''} onClick={() => go('/mandal-portal')}>Mandal Portal</button>
           <button className={active === 'privacy' ? 'active' : ''} onClick={() => go('/privacy-policy')}>Privacy Policy</button>
-          <button className={active === 'delete' ? 'active' : ''} onClick={() => go('/delete-account')}>Delete Account</button>
+          {/* <button className={active === 'delete' ? 'active' : ''} onClick={() => go('/delete-account')}>Delete Account</button> */}
           <a className="global-nav-cta" href={`mailto:${import.meta.env.VITE_SUPPORT_EMAIL || 'coderzhiveai@gmail.com'}`}>Contact Support <span>↗</span></a>
         </nav>
       </div>

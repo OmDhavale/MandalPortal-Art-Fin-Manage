@@ -59,7 +59,7 @@ export default function Navbar({
             <button type="button" onClick={() => go('/')}>Home</button>
             <button type="button" className="active" onClick={() => go('/mandal-portal')}>Mandal Portal</button>
             <button type="button" onClick={() => go('/privacy-policy')}>Privacy Policy</button>
-            <button type="button" onClick={() => go('/delete-account')}>Delete Account</button>
+            {/* <button type="button" onClick={() => go('/delete-account')}>Delete Account</button> */}
             <a href={`mailto:${supportEmail}`}>Contact Support <span>↗</span></a>
           </nav>
 
